@@ -32,12 +32,9 @@ And a service principal:
 >
 > Secret: (to be provided by email)
 
-You should use cloud shell, and, once in cloud shell, you should use
-automation to deploy a cluster.
+It is suggested to use cloud shell, and, once in cloud shell, automation to deploy a cluster. But you can also other approaches as long as they are representative of a DevOps approach. 
 
-You can choose other ways of automating it, and if you're more
-comfortable with other tools, by all means use them, but we're proposing
-you use the following ansible playbook:
+We're proposing the following ansible playbook:
 
 ``` yaml
 # Description
