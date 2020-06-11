@@ -26,6 +26,12 @@ In order to deploy the K8s cluster, you will be given an Azure account
 >
 > Password: (to be provided by email)
 
+And for client ID and secret:
+
+> Client ID: (to be provided by email)
+>
+> Secret: (to be provided by email)
+
 You should use cloud shell, and, once in cloud shell, you should use
 automation to deploy a cluster.
 
@@ -95,11 +101,7 @@ you use the following ansible playbook:
           vm_size: Standard_D2_v2
 ```
 
-For client ID and secret, you should use the following:
 
-> Client ID: XXXX
->
-> Secret: XXXX
 
 ## The Challenge:
 
