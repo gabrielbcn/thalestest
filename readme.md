@@ -101,7 +101,7 @@ For client ID and secret, you should use the following:
 >
 > Secret: XXXX
 
-**[The Challenge:]**
+## The Challenge:
 
 In this challenge we want you use the baseline given above as a starting
 point.
@@ -118,7 +118,7 @@ free to propose what you assess as most effective and flexible.
 Obviously, we would like you to present and explain your choices and
 achievements after the challenge.
 
-**[Problem Statements:]**
+## Problem Statements:
 
 We don't want this cluster to be created as it is in the script by
 default.
@@ -146,7 +146,7 @@ What are your recommendations? We would like some quick and easy
 solutions for a start. Include one or more of such solutions into your
 answer.
 
-**[Getting Started:]**
+## Getting Started:
 
 In order to get the file mentioned, you can use:
 
@@ -342,7 +342,7 @@ spec:
 
 Check links and get the ip's (two), do you get the same answer? Etc...
 
-**[Hints:]**
+### Hints:
 
 If you have a problem: check that the ports are right. If you open an
 interactive session with the container in the node it will tell you to

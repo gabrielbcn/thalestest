@@ -1,3 +1,5 @@
+# sample yaml to create or expose a service in kubernetes
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -7,14 +9,12 @@ metadata:
     tier: frontend
 spec:
   # comment or delete the following line if you want to use a LoadBalancer
-  type: NodePort 
+  type: NodePort
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
   # type: LoadBalancer
   ports:
-  - port: 80
+    - port: 80
   selector:
     app: guestbook
     tier: frontend
-
-

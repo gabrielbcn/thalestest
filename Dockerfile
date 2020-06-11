@@ -1,3 +1,5 @@
+# Super simple dockerfile, feel free to modify
+
 FROM golang:latest
 
 WORKDIR /app

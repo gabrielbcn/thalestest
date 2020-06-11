@@ -1,3 +1,6 @@
+// Sample application coded in go...
+// HTTP server that serves three different things, all of them quite easy to guess...
+
 package main
 
 import (
