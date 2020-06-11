@@ -1,11 +1,9 @@
-# Description
-# ===========
 # This playbook first creates an Azure Kubernetes Service cluster of 2 nodes with provided username and ssh key and scales it to 3 nodes.
-# Change variables below to customize your AKS deployment.
+# Change variables below to customize your AKS deployment, please use the variables section for that purpose
 # It also requires a valid service principal to create AKS cluster, so fill:
 # - client_id
 # - client_secret
-# This sample requires Ansible 2.6 
+# This sample requires Ansible 2.6
 
 - name: Create Azure Kubernetes Service
   hosts: localhost
@@ -19,41 +17,41 @@
     client_id: "{{ lookup('env', 'AZURE_CLIENT_ID') }}"
     client_secret: "{{ lookup('env', 'AZURE_CLIENT_SECRET') }}"
   tasks:
-  - name: Create resource group
-    azure_rm_resourcegroup:
-      name: "{{ resource_group }}"
-      location: "{{ location }}"
-  - name: Create a managed Azure Container Services (AKS) cluster
-    azure_rm_aks:
-      name: "{{ aks_name }}"
-      location: "{{ location }}"
-      resource_group: "{{ resource_group }}"
-      dns_prefix: "{{ aks_name }}"
-      linux_profile:
-        admin_username: "{{ username }}"
-        ssh_key: "{{ ssh_key }}"
-      service_principal:
-        client_id: "{{ client_id }}"
-        client_secret: "{{ client_secret }}"
-      agent_pool_profiles:
-        - name: default
-          count: 2
-          vm_size: Standard_D2_v2
-      tags:
-        Environment: Production
-  - name: Scale created Azure Container Services (AKS) cluster
-    azure_rm_aks:
-      name: "{{ aks_name }}"
-      location: "{{ location }}"
-      resource_group: "{{ resource_group }}"
-      dns_prefix: "{{ aks_name }}"
-      linux_profile:
-        admin_username: "{{ username }}"
-        ssh_key: "{{ ssh_key }}"
-      service_principal:
-        client_id: "{{ client_id }}"
-        client_secret: "{{ client_secret }}"
-      agent_pool_profiles:
-        - name: default
-          count: 3
-          vm_size: Standard_D2_v2
+    - name: Create resource group
+      azure_rm_resourcegroup:
+        name: "{{ resource_group }}"
+        location: "{{ location }}"
+    - name: Create a managed Azure Container Services (AKS) cluster
+      azure_rm_aks:
+        name: "{{ aks_name }}"
+        location: "{{ location }}"
+        resource_group: "{{ resource_group }}"
+        dns_prefix: "{{ aks_name }}"
+        linux_profile:
+          admin_username: "{{ username }}"
+          ssh_key: "{{ ssh_key }}"
+        service_principal:
+          client_id: "{{ client_id }}"
+          client_secret: "{{ client_secret }}"
+        agent_pool_profiles:
+          - name: default
+            count: 2
+            vm_size: Standard_D2_v2
+        tags:
+          Environment: Production
+    - name: Scale created Azure Container Services (AKS) cluster
+      azure_rm_aks:
+        name: "{{ aks_name }}"
+        location: "{{ location }}"
+        resource_group: "{{ resource_group }}"
+        dns_prefix: "{{ aks_name }}"
+        linux_profile:
+          admin_username: "{{ username }}"
+          ssh_key: "{{ ssh_key }}"
+        service_principal:
+          client_id: "{{ client_id }}"
+          client_secret: "{{ client_secret }}"
+        agent_pool_profiles:
+          - name: default
+            count: 3
+            vm_size: Standard_D2_v2
