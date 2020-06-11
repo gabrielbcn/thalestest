@@ -352,8 +352,8 @@ Entry points are important.
 
 Singapore is in South East Asia, also known as "southeastasia"
 
-If you want to do something different to make this challenge work, go ahead, just explain us why.
-
 You can also fork this repo, make all the fine tuning, and show us your own version of the exercise.
 
-*Exercise tested working, **with a few tweaks**, on Azure, 12th June 2020.*
+If you want to do something different to make this challenge work, go ahead, **the more DevOps the better**.
+
+Exercise tested working, with modified files, on Azure, 12th June 2020.*
