@@ -349,4 +349,6 @@ interactive session with the container in the node it will tell you to
 which port is the http server attached. You must properly map this to
 the externally exposed port.
 
-If you want to do something different to make this challenge work, go ahead, but we need to understand why.
+If you want to do something different to make this challenge work, go ahead, just explain why.
+
+You can also fork this repo, make all the fine tuning, and show us your own version of the exercise.
