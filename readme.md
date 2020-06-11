@@ -26,7 +26,7 @@ In order to deploy the K8s cluster, you will be given an Azure account
 >
 > Password: (to be provided by email)
 
-And for client ID and secret:
+And a service principal:
 
 > Client ID: (to be provided by email)
 >
