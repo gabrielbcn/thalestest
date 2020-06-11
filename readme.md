@@ -352,4 +352,4 @@ If you want to do something different to make this challenge work, go ahead, jus
 
 You can also fork this repo, make all the fine tuning, and show us your own version of the exercise.
 
-For uploading the container in the kubernetes cluster you can choose to store it in dockerhub or any other way you see fit.
+For uploading the container in the kubernetes cluster you can choose to store it in dockerhub or any other way you see fit. And remember the entry point.
