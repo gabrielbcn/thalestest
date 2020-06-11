@@ -152,17 +152,16 @@ answer.
 
 In order to get the file mentioned, you can use:
 
-git clone <https://github.com/Azure-Samples/ansible-playbooks.git>
+`git clone ...`
 
 You will be able to execute it as:
 
-ansible-playbook aks\_create\_scale.yml
+`ansible-playbook myplaybook.yml`
 
 But first please remember to change it to our needs and later on to get
 credentials
 
-az aks get-credentials \--resource-group yourResourceGroup \--name
-yourAKSname
+`az aks get-credentials --resource-group yourResourceGroup --name yourAKSname`
 
 And you should be able to see the nodes created. We leave this to you.
 
@@ -276,7 +275,7 @@ Which will start executing instantaneously from cloud shell. You will be
 able to interact with it with the proper controls. Image should be
 tagged as thalestest, make sure it has been done.
 
-Now create a deployment, example of yaml follows
+Now create a deployment, an example of yaml follows. But take into account that you need to deploy the container we have created, not the sample given below.
 
 ``` yaml
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
@@ -318,8 +317,9 @@ spec:
         ports:
         - containerPort: 80
 ```
+`kubectl apply -f ./my-manifest.yaml`
 
-Create a service, two nodes min. Expose through load balancer.
+Now the deployment should be made accessible to the internet. The following sample exposes the deployment as a nodeport, but we'd rather use a load balancer. Comment on the available options and whether you will have to create a load balancer manually. If it's an entity creating it (recommended), comment on the identity of the entity.
 
 ``` yaml
 apiVersion: v1
@@ -342,7 +342,7 @@ spec:
     tier: frontend
 ```
 
-Check links and get the ip's (two), do you get the same answer? Etc...
+Now the service should be accessible through the internet. We should be able to see the IP inside the pods using the given go code. It is interesting to comment about the IP address we are getting, whether it is always the same and why.
 
 ### Hints:
 
@@ -354,3 +354,5 @@ the externally exposed port.
 If you want to do something different to make this challenge work, go ahead, just explain why.
 
 You can also fork this repo, make all the fine tuning, and show us your own version of the exercise.
+
+For uploading the container in the kubernetes cluster you can choose to store it in dockerhub or any other way you see fit.
