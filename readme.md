@@ -341,17 +341,19 @@ spec:
 
 Now the service should be accessible through the internet. We should be able to see the IP inside the pods using the given go code. It is interesting to comment about the IP address we are getting, whether it is always the same and why.
 
+
 ### A few hints you may need:
 
-If you have a problem: check that the ports are right. If you open an
-interactive session with the container in the node it will tell you to
-which port is the http server attached. You must properly map this to
-the externally exposed port.
+If you have a problem: check that the ports are right. Map the ports accodingly.
+
+To upload the container in the kubernetes cluster you can choose to store it in dockerhub or any other way you see fit. 
+
+Entry points are important.
+
+Singapore is in South East Asia, also known as "southeastasia"
 
 If you want to do something different to make this challenge work, go ahead, just explain us why.
 
 You can also fork this repo, make all the fine tuning, and show us your own version of the exercise.
 
-For uploading the container in the kubernetes cluster you can choose to store it in dockerhub or any other way you see fit. And remember the entry point.
-
-Singapore is in South East Asia, also known as "southeastasia"
+Exercise tested working, with a few tweaks, on Azure, 12th June 2020.
