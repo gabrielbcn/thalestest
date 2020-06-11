@@ -342,7 +342,7 @@ spec:
 Now the service should be accessible through the internet. We should be able to see the IP inside the pods using the given go code. It is interesting to comment about the IP address we are getting, whether it is always the same and why.
 
 
-### A few hints you may need:
+### A few hints you may, or may not, need:
 
 If you have a problem: check that the ports are right. Map the ports accodingly.
 
@@ -356,4 +356,4 @@ If you want to do something different to make this challenge work, go ahead, jus
 
 You can also fork this repo, make all the fine tuning, and show us your own version of the exercise.
 
-Exercise tested working, with a few tweaks, on Azure, 12th June 2020.
+*Exercise tested working, with a few tweaks, on Azure, 12th June 2020.*
