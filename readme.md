@@ -356,4 +356,4 @@ You can also fork this repo, make all the fine tuning, and show us your own vers
 
 If you want to do something different to make this challenge work, go ahead, **the more DevOps the better**.
 
-Exercise tested working, with modified files, on Azure, 12th June 2020.*
+Exercise tested working, with modified files, on Azure, 12th June 2020.
