@@ -344,7 +344,7 @@ Now the service should be accessible through the internet. We should be able to 
 
 ### A few hints you may, or may not, need:
 
-If you have a problem: check that the ports are right. Map the ports accodingly.
+If you have a problem: check that the ports are right. Map the ports accordingly.
 
 To upload the container in the kubernetes cluster you can choose to store it in dockerhub or any other way you see fit. 
 
@@ -356,4 +356,4 @@ If you want to do something different to make this challenge work, go ahead, jus
 
 You can also fork this repo, make all the fine tuning, and show us your own version of the exercise.
 
-*Exercise tested working, with a few tweaks, on Azure, 12th June 2020.*
+*Exercise tested working, **with a few tweaks**, on Azure, 12th June 2020.*
