@@ -346,6 +346,8 @@ Now the service should be accessible through the internet. We should be able to 
 
 If you have a problem: check that the ports are right. Map the ports accordingly.
 
+If you have a problem with ansible: there are known bugs with python 3.8. and ansible and azure dependencies are required.
+
 To upload the container in the kubernetes cluster you can choose to store it in dockerhub or any other way you see fit. 
 
 Entry points are important.
