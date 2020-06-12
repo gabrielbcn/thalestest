@@ -363,6 +363,6 @@ If you want to do something different to make this challenge work, go ahead, **t
 
 Testing this exercise on 12th June 2020, I detected a problem for the specific case in which you run brew-installed ansible in MacOs, which uses python 3.8, and use the azure_rm_aks controller:
   - Assuming you have all the python dependent packages installed as per the requirement [here](https://github.com/ansible/ansible/blob/stable-2.9/packaging/requirements/requirements-azure.txt)
-  - the azure_rm_aks controller is using a function, time.clock() that was removed in python 3.8. (no backwards compatibility from 3.7 to 3.8 python, can you believe it? kindly use a superior language such as java or go instead -okay kotlin too-)
+  - the azure_rm_aks controller is using a function, `time.clock()` that was removed in python 3.8. (no backwards compatibility from 3.7 to 3.8 python, can you believe it? kindly use a superior language such as java or go instead -okay kotlin too-)
   - can be sorted out by editing /usr/local/lib/python3.8/site-packages/azure/cli/core/_session.py line 37 and replacing `time.clock()` with `time.process_time()`
   - the problem only happens when you run a playbook in a Mac with this specific controller, if you run it in azure cloud shell, which was the guidance above, you find all the right versions and dependencies installed
