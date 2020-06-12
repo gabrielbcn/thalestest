@@ -346,8 +346,6 @@ Now the service should be accessible through the internet. We should be able to 
 
 If you have a problem: check that the ports are right. Map the ports accordingly.
 
-If you have a problem with ansible: there are known bugs with python 3.8. and ansible and azure dependencies are required.
-
 To upload the container in the kubernetes cluster you can choose to store it in dockerhub or any other way you see fit. 
 
 Entry points are important.
@@ -358,4 +356,12 @@ You can also fork this repo, make all the fine tuning, and show us your own vers
 
 If you want to do something different to make this challenge work, go ahead, **the more DevOps the better**.
 
+
+
 Exercise tested working, with modified files, on Azure, 12th June 2020.
+
+Testing this exercise we have detected a problem when you run brew-installed ansible in MacOs and use the azure_rm_aks controller: 
+    - python dependent packages must be installed, get them [here](https://github.com/ansible/ansible/blob/stable-2.9/packaging/requirements/requirements-azure.txt)
+    - the azure_rm_aks controller is using a function, time.clock() that was removed in python 3.8. (no backwards compatibility in python! kindly use java or go)
+    - can be sorted out by editing /usr/local/lib/python3.8/site-packages/azure/cli/core/_session.py line 37 and replacing time.clock() with time.process_time()
+    - the problem only happens when you run the playbook in a Mac with that configuration, if you run it in azure cloud shell, which was the guidance above, you find all the right versions and dependencies installed
